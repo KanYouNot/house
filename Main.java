@@ -8,7 +8,10 @@ public class Main {
                 new Person("Anna", "Nowak"),
                 new Person("Piotr", "Zieliński")
         );
-        
+
+
+
+        System.out.println("Imiona zaczynajace sie na litere A:");
         for (Person person : people) {
             char[] x = person.toString().toCharArray();
             char y = x[0];
@@ -16,6 +19,16 @@ public class Main {
                 System.out.println(person);
             }
         }
+        System.out.println();
+
+        System.out.println("Imiona dluzsze niz 4 litery:");
+        for (Person person : people) {
+            char[] x = person.toString().toCharArray();
+            if (person.firstName.length()>4) {
+                System.out.println(person);
+            }
+        }
+        System.out.println();
 
 
 
