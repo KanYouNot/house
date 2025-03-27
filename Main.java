@@ -8,16 +8,12 @@ public class Main {
                 new Person("Anna", "Nowak"),
                 new Person("Piotr", "Zieliński")
         );
-
-
-        char[] p1n = people.getFirst().toString().toCharArray();
-        char[] p2n = people.getFirst().toString().toCharArray();
-        char[] p3n = people.getFirst().toString().toCharArray();
-        for (int i = 0; i < people.size(); i++) {
-//            char x = people.get(i).toString().toCharArray();
-            char[] x = {'A'};
-            if (x.equals(people.get(i).toString().toCharArray())){
-
+        
+        for (Person person : people) {
+            char[] x = person.toString().toCharArray();
+            char y = x[0];
+            if ('A' == y) {
+                System.out.println(person);
             }
         }
 
